@@ -38,7 +38,7 @@ def get_config(training = True):
         conf.momentum = 0.9
         conf.pin_memory = True
 #         conf.num_workers = 4 # when batchsize is 200
-        conf.num_workers = 3
+        conf.num_workers = 16
         conf.ce_loss = CrossEntropyLoss()    
 #--------------------Inference Config ------------------------
     else:
