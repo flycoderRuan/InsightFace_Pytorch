@@ -66,6 +66,12 @@ class face_learner(object):
         else:
             save_path = conf.model_path
             # torch.save(self.model.state_dict(), save_path('model_{}_accuracy:{}_step:{}_{}.pth'.format(get_time(), accuracy, self.step, extra)))
+            print("save_path")
+            print(save_path)
+            print(type(save_path))
+            print("+++")
+            print('model_accuracy:{}_step:{}.pth'.format(accuracy, self.step))
+            print(type('model_accuracy:{}_step:{}.pth'.format(accuracy, self.step)))
             print("get_time")
             print(type(get_time()))
             print("extra")
