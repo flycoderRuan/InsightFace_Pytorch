@@ -76,10 +76,10 @@ class face_learner(object):
             print(type(get_time()))
             print("extra")
             print(type(extra))
-            torch.save(self.model.state_dict(), save_path + 'model_accuracy:{}_step:{}.pth'.format(accuracy, self.step))
+            torch.save(self.model.state_dict(), save_path/'model_accuracy:{}_step:{}.pth'.format(accuracy, self.step))
         if not model_only:
-            torch.save(self.head.state_dict(), save_path + 'head_accuracy:{}_step:{}.pth'.format(accuracy, self.step,))
-            torch.save(self.optimizer.state_dict(), save_path + 'optimizer_accuracy:{}_step:{}.pth'.format(accuracy, self.step))
+            torch.save(self.head.state_dict(), save_path/'head_accuracy:{}_step:{}.pth'.format(accuracy, self.step,))
+            torch.save(self.optimizer.state_dict(), save_path/'optimizer_accuracy:{}_step:{}.pth'.format(accuracy, self.step))
     
     def load_state(self, conf, fixed_str, from_save_folder=False, model_only=False):
         if from_save_folder:
